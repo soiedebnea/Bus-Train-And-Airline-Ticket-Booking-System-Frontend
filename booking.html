@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — Passenger details</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html">Search</a>
+        <a href="ticket.html">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="flow-breadcrumb" id="breadcrumb"></div>
+      <div class="eyebrow-route" id="routeLabel">Loading…</div>
+      <h1>Passenger details</h1>
+      <p class="lede">Confirm who's travelling. Your ticket preview updates on the right as you type.</p>
+
+      <div class="split">
+        <form class="form-card" id="bookingForm">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="As on your ID" required />
+          </div>
+          <div class="form-row-pair">
+            <div class="form-row">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="1" max="120" required />
+            </div>
+            <div class="form-row">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="email">Email <span class="hint">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone <span class="hint">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 555 0100" />
+          </div>
+
+          <div class="error-text" id="formError"></div>
+
+          <button type="submit" class="btn-amber" id="confirmBtn">Confirm booking</button>
+        </form>
+
+        <div class="ticket-stub" id="previewStub">
+          <div class="stub-top">
+            <div class="stub-route" id="previewRoute">— → —</div>
+            <div class="stub-meta" id="previewMeta">Loading journey…</div>
+          </div>
+          <div class="stub-grid">
+            <div class="stub-field"><div class="k">Passenger</div><div class="v" id="previewName">—</div></div>
+            <div class="stub-field"><div class="k">Seat</div><div class="v" id="previewSeat">—</div></div>
+            <div class="stub-field"><div class="k">Date</div><div class="v" id="previewDate">—</div></div>
+          </div>
+          <div class="stub-perf"></div>
+          <div class="stub-bottom">
+            <div class="pnr-block">
+              <div class="k">Status</div>
+              <div class="v">Not booked yet</div>
+            </div>
+            <div class="fare-block">
+              <div class="k">Fare</div>
+              <div class="amount" id="previewFare">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

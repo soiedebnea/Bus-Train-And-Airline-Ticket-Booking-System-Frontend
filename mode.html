@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — Choose airline, bus or train</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html">Search</a>
+        <a href="ticket.html">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="flow-breadcrumb" id="breadcrumb"></div>
+      <h1>How would you like to travel?</h1>
+      <p class="lede">Choose a mode of transport to see the companies operating in this country.</p>
+
+      <div class="card-grid" id="modeGrid">
+        <a class="select-card mode-card" data-mode="airline" href="#">
+          <span class="icon">✈️</span>
+          <span class="title">Airline</span>
+          <span class="desc">Domestic and regional flights</span>
+        </a>
+        <a class="select-card mode-card" data-mode="bus" href="#">
+          <span class="icon">🚌</span>
+          <span class="title">Bus</span>
+          <span class="desc">Intercity coach services</span>
+        </a>
+        <a class="select-card mode-card" data-mode="train" href="#">
+          <span class="icon">🚆</span>
+          <span class="title">Train</span>
+          <span class="desc">Rail operators and named services</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/mode-select.js"></script>
+</body>
+</html>

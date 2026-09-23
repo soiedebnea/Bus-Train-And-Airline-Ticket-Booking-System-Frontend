@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — Select a seat</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html">Search</a>
+        <a href="ticket.html">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="flow-breadcrumb" id="breadcrumb"></div>
+      <div class="eyebrow-route" id="routeLabel">Loading…</div>
+      <h1>Choose your seat</h1>
+      <p class="lede" id="journeyMeta"></p>
+
+      <div class="seat-legend">
+        <span><span class="swatch free"></span> Available</span>
+        <span><span class="swatch chosen"></span> Selected</span>
+        <span><span class="swatch taken"></span> Booked</span>
+      </div>
+
+      <div class="cabin">
+        <div class="seat-grid" id="seatGrid"></div>
+      </div>
+
+      <div class="seat-summary-bar">
+        <div class="figures">
+          Seat: <strong id="chosenSeatLabel">none selected</strong>
+          &nbsp;&nbsp;·&nbsp;&nbsp; Fare: <span class="amount" id="chosenFare">—</span>
+        </div>
+        <button class="btn-amber" id="continueBtn" disabled>Continue to passenger details</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/seats.js"></script>
+</body>
+</html>

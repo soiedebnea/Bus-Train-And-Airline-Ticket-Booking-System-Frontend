@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — Choose a company</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html">Search</a>
+        <a href="ticket.html">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="flow-breadcrumb" id="breadcrumb"></div>
+      <h1 id="pageTitle">Choose a company</h1>
+      <p class="lede" id="pageLede"></p>
+
+      <div class="card-grid" id="operatorGrid">
+        <div class="empty-state">Loading companies…</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/operators.js"></script>
+</body>
+</html>

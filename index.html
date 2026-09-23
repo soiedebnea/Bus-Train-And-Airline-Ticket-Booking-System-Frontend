@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — Choose a country</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html" class="active">Search</a>
+        <a href="ticket.html">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Where are you travelling?</h1>
+      <p class="lede">Pick a country to start. Next you'll choose airline, bus or train, then the operator, then your seat.</p>
+
+      <div class="card-grid" id="countryGrid">
+        <div class="empty-state">Loading countries…</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/country-select.js"></script>
+</body>
+</html>

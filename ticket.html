@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transit — My ticket</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="board-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="flap">▣</span> Transit
+        <span class="sub">AIRLINE · BUS · TRAIN BOOKING</span>
+      </div>
+      <nav class="board-nav">
+        <a href="index.html">Search</a>
+        <a href="ticket.html" class="active">My ticket</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <h1>Look up a ticket</h1>
+      <p class="lede">Enter the PNR you received when booking to view or cancel that ticket.</p>
+
+      <form class="lookup-box" id="lookupForm">
+        <input type="text" id="pnrInput" placeholder="e.g. NCME72CF" maxlength="12" />
+        <button type="submit" class="btn-amber">Find</button>
+      </form>
+
+      <div id="ticketArea"></div>
+    </div>
+  </main>
+
+  <footer>Transit Ticket Booking System — demo project, not a real booking service.</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/ticket.js"></script>
+</body>
+</html>
